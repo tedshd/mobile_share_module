@@ -11,7 +11,7 @@ mobile_share_module
 ### Parameter
 
 |key|type|required|description|example|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |url|string|required|url you want share|'https://tedshd.io/'|
 |fbAppId / fb_app_id|string|no|fb application id|'123456789'|
 |twitterText / twitter_text|string|no|it can show text in twitter card|'Share it!'|
