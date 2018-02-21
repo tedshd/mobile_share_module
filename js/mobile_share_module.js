@@ -5,15 +5,15 @@
  * @version 0.1
  */
 
-function mobile_share_module(url, fbAppId, twitterText, twitterRef) {
+function mobile_share_module(url, option) {
     if (!url) {
         console.error('url is require');
         return;
     }
-    var app_id = (fbAppId) ? '&app_id=' + fbAppId : '';
-    var text = (twitterText) ? '&text=' + twitterText : '';
-    var ref = (twitterRef) ? '&original_referer=' + twitterRef : '';
-    var obj = {
+    var app_id = (option && option.fbAppId) ? '&app_id=' + option.fbAppId : '',
+        text = (option && option.twitterText) ? '&text=' + option.twitterText : '',
+        ref = (option && option.twitterRef) ? '&original_referer=' + option.twitterRef : '',
+        obj = {
         'line': {
             'href': 'https://line.naver.jp/R/msg/text/?' + encodeURIComponent(url),
             'icon': './img/icon_line_32.png',

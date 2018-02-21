@@ -16,11 +16,11 @@
 </head>
 <body>
 <ul id="share">
-    <li v-for="item in obj">
-        <a v-bind:href="item.href" target="_blank">
-           <img v-bind:src="item.icon" v-bind:srcset="item.srcset" alt="line">
-       </a>
-    </li>
+  <li v-for="item in obj">
+    <a v-bind:href="item.href" target="_blank">
+      <img v-bind:src="item.icon" v-bind:srcset="item.srcset" alt="line">
+    </a>
+  </li>
 </ul>
 </body>
 <script src="./js/mobile_share_module.js"></script>
@@ -29,7 +29,7 @@
 var obj = mobile_share_module('http://tedshd.logdown.com/');
 
 for (var key in obj) {
-    obj[key]['srcset'] = obj[key]['icon_2x'] + ' 1.5x, ' + obj[key]['icon_2x'] + ' 2x, ' + obj[key]['icon_2x'] + ' 3x';
+  obj[key]['srcset'] = obj[key]['icon_2x'] + ' 1.5x, ' + obj[key]['icon_2x'] + ' 2x, ' + obj[key]['icon_2x'] + ' 3x';
 }
 
 new Vue({
@@ -41,6 +41,13 @@ new Vue({
   }
 });
 
+var imgUrl = {
+  'iconLine': '',
+  'iconFacebook': '',
+  'iconMessenger': '',
+  'iconGoogle': '',
+  'iconTwitter': ''
+}
 
 console.log(mobile_share_module('http://tedshd.logdown.com/'));
 
