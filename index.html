@@ -25,8 +25,20 @@
 </body>
 <script src="./js/mobile_share_module.js"></script>
 <script>
+var imgUrl = {
+  'iconLine': './img/icon_line_32.png',
+  'iconLine2x': './img/icon_line_64.png',
+  'iconFacebook': './img/icon_fb_32.png',
+  'iconFacebook2x': './img/icon_fb_64.png',
+  'iconMessenger': './img/icon_messenger_32.png',
+  'iconMessenger2x': './img/icon_messenger_64.png',
+  'iconGoogle': './img/icon_google_32.png',
+  'iconGoogle2x': './img/icon_google_64.png',
+  'iconTwitter': './img/icon_twitter_32.png',
+  'iconTwitter2x': './img/icon_twitter_64.png'
+}
 
-var obj = mobile_share_module('http://tedshd.logdown.com/');
+var obj = mobile_share_module('http://tedshd.logdown.com/', imgUrl);
 
 for (var key in obj) {
   obj[key]['srcset'] = obj[key]['icon_2x'] + ' 1.5x, ' + obj[key]['icon_2x'] + ' 2x, ' + obj[key]['icon_2x'] + ' 3x';
@@ -41,15 +53,8 @@ new Vue({
   }
 });
 
-var imgUrl = {
-  'iconLine': '',
-  'iconFacebook': '',
-  'iconMessenger': '',
-  'iconGoogle': '',
-  'iconTwitter': ''
-}
 
-console.log(mobile_share_module('http://tedshd.logdown.com/'));
+console.log(mobile_share_module('http://tedshd.logdown.com/', imgUrl));
 
 </script>
 </html>
