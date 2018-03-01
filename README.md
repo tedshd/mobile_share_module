@@ -68,7 +68,7 @@ mobile_share_module(url, imgUrl);
 **Example**
 
 ```PHP
-mobile_share_module($url, $fb_app_id = "", $twitter_text = "", $twitter_ref = "");
+mobile_share_module($url, $fb_app_id, $twitter_text, $twitter_ref);
 ```
 
 
