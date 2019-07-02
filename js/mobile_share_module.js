@@ -17,10 +17,10 @@ function mobile_share_module(url, option) {
         iconFacebook2x = (option && option.iconFacebook2x) ? option.iconFacebook2x : '',
         iconMessenger = (option && option.iconMessenger) ? option.iconMessenger : '',
         iconMessenger2x = (option && option.iconMessenger2x) ? option.iconMessenger2x : '',
-        iconGoogle = (option && option.iconGoogle) ? option.iconGoogle : '',
-        iconGoogle2x = (option && option.iconGoogle2x) ? option.iconGoogle2x : '',
         iconTwitter = (option && option.iconTwitter) ? option.iconTwitter : '',
         iconTwitter2x = (option && option.iconTwitter2x) ? option.iconTwitter2x : '',
+        iconPinterest = (option && option.iconPinterest) ? option.iconPinterest : '',
+        iconPinterest2x =(option && option.iconPinterest2x) ? option.iconPinterest2x : '',
         app_id = (option && option.fbAppId) ? '&app_id=' + option.fbAppId : '',
         text = (option && option.twitterText) ? '&text=' + option.twitterText : '',
         ref = (option && option.twitterRef) ? '&original_referer=' + option.twitterRef : '',
@@ -40,10 +40,10 @@ function mobile_share_module(url, option) {
             'icon': iconMessenger,
             'icon_2x': iconMessenger2x,
         },
-        'google': {
-            'href': 'https://plus.google.com/share?url=' + encodeURIComponent(url),
-            'icon': iconGoogle,
-            'icon_2x': iconGoogle2x,
+        'pinterest': {
+            'href': 'https://pinterest.com/pin/create/link/?url=' + encodeURIComponent(url),
+            'icon': iconPinterest,
+            'icon_2x': iconPinterest2x,
         },
         'twitter': {
             'href': 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + text + ref,
