@@ -21,7 +21,7 @@ function mobile_share_module($url, $fb_app_id = "", $twitter_text = "", $twitter
             'icon' => './img/icon_messenger_32.png',
             'icon_2x' => './img/icon_messenger_64.png',
         ],
-        'pinterest': [
+        'pinterest'  [
             'href' => 'https://pinterest.com/pin/create/link/?url=' + urlencode($url),
             'icon' => './img/icon_pinterest_32.png',
             'icon_2x' => './img/icon_pinterest_64.png',
