@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>share module</title>
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
-<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-<style>
-  img {
-    width: 32px;
-    height: 32px;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>share module</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+  <style>
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
 </head>
+
 <body>
-<ul id="share">
-  <li v-for="item in obj">
-    <a v-bind:href="item.href" target="_blank">
-      <img v-bind:src="item.icon" v-bind:srcset="item.srcset" alt="">
-    </a>
-  </li>
-</ul>
+  <ul id="share">
+    <li v-for="item in obj">
+      <a v-bind:href="item.href" target="_blank">
+        <img v-bind:src="item.icon" v-bind:srcset="item.srcset" alt="">
+      </a>
+    </li>
+  </ul>
 </body>
 <script src="./js/mobile_share_module.js"></script>
 <script>
-var imgUrl = {
-  'iconLine': './img/icon_line_32.png',
-  'iconLine2x': './img/icon_line_64.png',
-  'iconFacebook': './img/icon_fb_32.png',
-  'iconFacebook2x': './img/icon_fb_64.png',
-  'iconMessenger': './img/icon_messenger_32.png',
-  'iconMessenger2x': './img/icon_messenger_64.png',
-  'iconPinterest': './img/icon_pinterest_32.png',
-  'iconPinterest2x': './img/icon_pinterest_64.png',
-  'iconTwitter': './img/icon_twitter_32.png',
-  'iconTwitter2x': './img/icon_twitter_64.png'
-}
-
-var obj = mobile_share_module('http://tedshd.logdown.com/', imgUrl);
-
-for (var key in obj) {
-  obj[key]['srcset'] = obj[key]['icon_2x'] + ' 1.5x, ' + obj[key]['icon_2x'] + ' 2x, ' + obj[key]['icon_2x'] + ' 3x';
-}
-
-new Vue({
-  el: '#share',
-  data () {
-    return {
-      obj
-    }
+  var imgUrl = {
+    'iconLine': './img/icon_line_32.png',
+    'iconLine2x': './img/icon_line_64.png',
+    'iconFacebook': './img/icon_fb_32.png',
+    'iconFacebook2x': './img/icon_fb_64.png',
+    'iconMessenger': './img/icon_messenger_32.png',
+    'iconMessenger2x': './img/icon_messenger_64.png',
+    'iconPinterest': './img/icon_pinterest_32.png',
+    'iconPinterest2x': './img/icon_pinterest_64.png',
+    'iconTwitter': './img/icon_twitter_32.png',
+    'iconTwitter2x': './img/icon_twitter_64.png',
+    'iconWhatsapp': './img/icon_whatsapp_32.png',
+    'iconWhatsapp2x': './img/icon_whatsapp_64.png'
   }
-});
+
+  var obj = mobile_share_module('http://tedshd.logdown.com/', imgUrl);
+
+  for (var key in obj) {
+    obj[key]['srcset'] = obj[key]['icon_2x'] + ' 1.5x, ' + obj[key]['icon_2x'] + ' 2x, ' + obj[key]['icon_2x'] + ' 3x';
+  }
+
+  new Vue({
+    el: '#share',
+    data() {
+      return {
+        obj
+      }
+    }
+  });
 
 
-console.log(mobile_share_module('http://tedshd.logdown.com/', imgUrl));
+  console.log(mobile_share_module('http://tedshd.logdown.com/', imgUrl));
 
 </script>
+
 </html>
